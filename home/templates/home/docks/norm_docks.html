@@ -1,0 +1,141 @@
+{% extends 'base_page.html'%}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/docks/dock.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Нормативные документы
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+
+            <a href=""><span
+                    class="letter">Нормативные документы</span></a>
+            <!-- Uncomment below if you prefer to use an image logo -->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="{% url 'home'%}">Назад</a></li>
+            </ul>
+
+            <i class="bi bi-list mobile-nav-toggle">
+
+            </i>
+        </nav><!-- .navbar -->
+
+
+    </div>
+</header><!-- End Header -->
+
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="content">
+                        <h3>Трудовой договор</h3>
+                        <p>Соглашение между работодателем и работником, устанавливающее обязанности обеих сторон</p>
+                        <a href="/static/assets/trudovoy-dogovor.pdf"
+                        class="about-btn" target="_blank">Открыть</a>
+                    </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" id="one">
+                                <h3 data-aos="fade-up" data-aos-delay="100">Работодатель обязуется</h3>
+                                <i class="bi bi-cash-stack"></i>
+                                <p>Своевременно и в полном размере выплачивать работнику заработную плату</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="150" id="two">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-shield"></i>
+                                <p>Обеспечить условия труда, предусмотренные законодательством</p>
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200" id="three">
+                                <h3 data-aos="fade-up" data-aos-delay="200">Сотрудник обязуется</h3>
+                                <i class="bi bi-briefcase"></i>
+                                <p>Лично выполнять определённую этим соглашением трудовую функцию</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="250" id="four">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-card-checklist"></i>
+                                <p>Соблюдать действующие в организации правила внутреннего трудового распорядка</p>
+                            </div>
+                        </div>
+                    </div><!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <p></p>
+            <br>
+            <div class="row no-gutters">
+                <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="content">
+                        <h3>Приказ о приеме на работу</h3>
+                        <p>Документ, который оформляет трудовые отношения между работником и работодателем после
+                            подписания трудового договора</p>
+                        <a href="#"
+                        class="about-btn">Открыть</a>
+                    </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" id="five">
+                                <h3 data-aos="fade-up" data-aos-delay="100">Особенности заполнения</h3>
+                                <i class="bi bi-file-earmark-text"></i>
+                                <p>Условия приема на работу, ее характер, сведения о размере оклада указываются согласно
+                                    трудовому договору</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="150" id="six">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-calendar-event"></i>
+                                <p>В ряде случаев дата заключения приказа может быть более ранней</p>
+                            </div>
+                        </div>
+                    </div><!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->
+
+
+<a href="{% url 'home'%}" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-left-short"></i></a>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+
+    </div>
+</footer><!-- End Footer -->
+
+{% endblock %}
+
+<!--{% load static %}-->
+<!--<script src="{% static '/js/norm_viewer.js' %}"></script>-->

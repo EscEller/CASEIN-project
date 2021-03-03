@@ -1,0 +1,35 @@
+{% extends "base_page.html" %}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/start_page.css' %}">
+
+
+
+{% endblock %}
+
+{% block login %}
+
+<body>
+
+<!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+        <h1>Росатом адаптация</h1>
+        <h2>Вливайся в компанию быстро и эффективно!</h2>
+        <div class="col-auto my-1" style="padding-top: 2rem;">
+            <a type="submit" class="btn btn-primary" href="/accounts/login/"
+               style="width: 10rem;">Войти</a>
+        </div>
+
+    </div>
+</section><!-- End Hero -->
+
+
+
+</body>
+
+{% endblock %}
+
+
+

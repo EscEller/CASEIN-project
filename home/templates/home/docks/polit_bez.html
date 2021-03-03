@@ -1,0 +1,122 @@
+{% extends 'base_page.html'%}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/docks/dock.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Политика безопасности
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+
+            <a href=""><span
+                    class="letter">Политика безопасности</span></a>
+            <!-- Uncomment below if you prefer to use an image logo -->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="{% url 'home'%}">Назад</a></li>
+            </ul>
+
+            <i class="bi bi-list mobile-nav-toggle">
+
+            </i>
+        </nav><!-- .navbar -->
+
+
+    </div>
+</header><!-- End Header -->
+
+
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="content">
+                        <h3>Безопасность – наивысший приоритет</h3>
+                        <p>
+                            В безопасности нет мелочей. Представители компании знают правила безопасности, выполняют их
+                            и пресекают нарушения
+                        </p>
+                        <a href="https://www.rosatom.ru/about-nuclear-industry/safety-russian-npp/" class="about-btn"
+                           target="_blank">Открыть</a>
+                    </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" id="one">
+                                <a href="https://www.rosatom.ru/upload/iblock/74e/74eb9c650aa73e74d0b9b9aadea0c1f8.pdf"
+                                   style="" target="_blank"><h3 data-aos="fade-up" data-aos-delay="100"><u>Экологическая
+                                    политика</u></h3></a>
+                                <i class="bi bi-brightness-high"></i>
+                                <p>Является основой для разработки соответствующих локальных нормативных актов в области
+                                    охраны окружающей среды и обеспечения экологической безопасности</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="150" id="two">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-card-checklist"></i>
+                                <p>Соблюдение Экологической политики является обязательным для всех работников
+                                    Корпорации и организаций Корпорации</p>
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200" id="three">
+                                <a href="https://www.rosatom.ru/upload/iblock/278/278a5b347258378ee344cfe106806484.pdf"
+                                   style="" target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Социальная
+                                    политика</u></h3></a>
+                                <i class="bi bi-person-circle"></i>
+                                <p>Устанавливает цели, подходы и механизмы реализации социальной работы</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="250" id="four">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-card-checklist"></i>
+                                <p>Соблюдение Социальной политики является обязательным для госпорации "Росатом" и ее
+                                    организаций</p>
+                            </div>
+                        </div>
+                    </div><!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Section -->
+</main><!-- End #main -->
+
+
+<a href="{% url 'home'%}" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-left-short"></i></a>
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+
+    </div>
+</footer><!-- End Footer -->
+
+
+<!-- Template Main JS File -->
+
+
+{% endblock %}
+
+<!--{% load static %}-->
+<!--<script src="{% static '/js/def_viewer.js' %}"></script>-->

@@ -1,0 +1,186 @@
+{% extends 'base_page.html'%}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/team_page.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Моя команда
+{% endblock %}
+
+
+{% block content %}
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <!--<h1 class="text-light"><a href="index.html"><img src="/static/assets/img/profile/avatar1.jpg" alt=""-->
+            <!--class="img-fluid"></a>-->
+            <a href=""><span
+                    class="letter">РОСАТОМ АДАПТАЦИЯ</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li class="dropdown"><a href="{% url 'home'%}"><span>Компания</span>
+                    <i class="bi bi-chevron-down"></i></a>
+                    <ul style="
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 10px 10px 10px 10px;
+                font-size:8px">
+                        <li><a href="{% url 'home'%}">Уровень 1 / Основные положения</a></li>
+                        <li><a href="#">Уровень 2 / Задачи и команда<i class="bi bi-lock-fill"></i></a></li>
+                        <li><a href="#">Уровень 3 / Бизнес-процессы<i class="bi bi-lock-fill"></i></a></li>
+                        <li><a href="#">Уровень 4 / Завершение<i class="bi bi-lock-fill"></i></a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="{% url 'my_team'%}">Моя команда</a></li>
+                <li><a class="nav-link scrollto" href="{% url 'contacts'%}">Контакты</a></li>
+                <li><a class="nav-link scrollto" href="{% url 'logout'%}?next=/home/">Выход</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+    </div>
+</header><!-- End Header -->
+
+<main id="main">
+    <section id="team" class="team">
+        <div class="container">
+
+
+            <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                <h2>{{ user_dep_title }}</h2>
+                <!--<p></p>-->
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6" style="margin-left: auto; margin-right: auto;">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-info">
+                            <h4>{{ username }}</h4>
+                            <span>{{ user_position }}</span>
+                            <span>{{ user_email }}</span>
+                            <span>каб: {{ user_office }}</span>
+                            <span>тел: {{ user_phone }}</span>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="section-title" id="collega" data-aos="fade-in" data-aos-delay="100"
+                >
+                    <h2>Коллеги</h2>
+                </div>
+
+                {% if is_team %}
+
+                {% if is_head_mentor %}
+
+                <div class="col-lg-4 col-md-6" style="margin-left: auto; margin-right: auto;">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-info">
+                            <h4>{{ head_name }}</h4>
+                            <span>Начальник / Наставник / {{ head_position }}</span>
+                            <span>{{ head_email }}</span>
+                            <span>каб: {{ head_office }}</span>
+                            <span>тел: {{ head_phone }}</span>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                {% else %}
+
+
+                {% if is_head %}
+
+
+                <div class="col-lg-4 col-md-6" style="margin-left: auto; margin-right: auto;">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-info">
+                            <h4>{{ head_name }}</h4>
+                            <span>Начальник / {{ head_position }}</span>
+                            <span>{{ head_email }}</span>
+                            <span>каб: {{ head_office }}</span>
+                            <span>тел: {{ head_phone }}</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+
+                {% if is_mentor %}
+
+
+                <div class="col-lg-4 col-md-6" style="margin-left: auto; margin-right: auto;">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-info">
+                            <h4>{{ mentor_name }}</h4>
+                            <span>Наставник / {{ mentor_position }}</span>
+                            <span>{{ mentor_email }}</span>
+                            <span>каб: {{ mentor_office }}</span>
+                            <span>тел: {{ mentor_phone }}</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endif %}
+                {% endif %}
+
+                {% for username, user_position, user_email, user_phone, user_office in user_team_data %}
+
+                <div class="col-lg-4 col-md-6" style="margin-left: auto; margin-right: auto;">
+                    <div class="member" data-aos="fade-up">
+                        <div class="member-info">
+                            <h4>{{ username }}</h4>
+                            <span>{{ user_position }}</span>
+                            <span>{{ user_email }}</span>
+                            <span>каб: {{ user_office }}</span>
+                            <span>тел: {{ user_phone }}</span>
+
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+
+                {% else %}
+
+                <div class="section-title" data-aos="fade-in" data-aos-delay="100"
+                     style="margin-top: 60px;">
+                    <h2>К сожалению, у вас пока нет коллег.</h2>
+                </div>
+
+                {% endif %}
+            </div>
+
+
+    </section>
+
+</main>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+
+    </div>
+</footer><!-- End Footer -->
+
+{% endblock %}

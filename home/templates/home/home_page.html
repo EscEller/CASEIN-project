@@ -1,0 +1,150 @@
+{% extends 'base_page.html'%}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/home_page.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+
+{% block content %}
+
+<!--<h1> Hello world! </h1>-->
+<!--<li class="nav-item-logout">-->
+<!--<a class="nav-link" href="{% url 'logout'%}?next=/home/">Выход</a>-->
+<!--</li>-->
+
+
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <!--<h1 class="text-light"><a href="index.html"><img src="/static/assets/img/profile/avatar1.jpg" alt=""-->
+            <!--class="img-fluid"></a>-->
+            <a href=""><span
+                    class="letter">РОСАТОМ АДАПТАЦИЯ</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li class="dropdown"><a href="{% url 'home'%}"><span>Компания</span>
+                    <i class="bi bi-chevron-down"></i></a>
+                    <ul style="
+                background: rgba(255, 255, 255, 0.95);
+                border-radius: 10px 10px 10px 10px;
+                font-size:8px">
+                        <li><a href="{% url 'home'%}">Уровень 1 / Основные положения</a></li>
+                        <li><a href="#">Уровень 2 / Задачи и команда<i class="bi bi-lock-fill"></i></a></li>
+                        <li><a href="#">Уровень 3 / Бизнес-процессы<i class="bi bi-lock-fill"></i></a></li>
+                        <li><a href="#">Уровень 4 / Завершение<i class="bi bi-lock-fill"></i></a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="{% url 'my_team'%}">Моя команда</a></li>
+                <li><a class="nav-link scrollto" href="{% url 'contacts'%}">Контакты</a></li>
+                <li><a class="nav-link scrollto" href="{% url 'logout'%}?next=/home/">Выход</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+    </div>
+</header><!-- End Header -->
+
+
+<!-- ======= About Section ======= -->
+<main id="main">
+    <section id="cta" class="cta" style='
+    border-radius: 25px 25px 25px 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-height: 250px;'>
+        <div class="container" data-aos="zoom-in">
+
+            <div class="text-center">
+                <h3>Уровень 1</h3><h4>Основные положения</h4>
+                <p>Миссия. Стратегичиские цели. Ценности.</p>
+                <a class="cta-btn" target="_blank" href="https://www.rosatom.ru/about/mission/">Подробнее</a>
+            </div>
+
+        </div>
+    </section>
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container">
+
+            <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                <h2>Документация</h2>
+                <p>Мы собрали всю важную информацию в одном месте.
+                    Обязательно с ней ознакомься!</p>
+            </div>
+            <div class="row">
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4 class="title"><a href="{% url 'norm_docks'%}">Нормативные документы</a></h4>
+                        <p class="description">Приказ о приеме на работу. Трудовой договор.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-check-shield"></i></div>
+                        <h4 class="title"><a href="{% url 'polit_bez'%}">Политика безопасности</a></h4>
+                        <p class="description">Инструкции и регламенты по обеспечению безопасности.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-directions"></i></div>
+                        <h4 class="title"><a href="{% url 'instructions'%}">Инструкции</a></h4>
+                        <p class="description">Должностные инструкции. Инструкции по охране труда.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-coffee "></i></div>
+                        <h4 class="title"><a href="{% url 'corp_culture'%}">Корпоративная культура</a></h4>
+                        <p class="description">Знакомство с корпоративной культурой компании.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+        <div class="container" data-aos="zoom-in">
+
+            <div class="text-center">
+                <h3>Тестирование</h3>
+                <p>После ознакомления с документами пройди тест</p>
+                <a class="cta-btn"
+                   href="https://forms.yandex.ru/u/603e000cf592d7bf42b82459/" target="_blank">Начать</a>
+            </div>
+
+        </div>
+    </section><!-- End Cta Section -->
+
+</main>
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+{% endblock %}

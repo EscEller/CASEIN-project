@@ -1,0 +1,179 @@
+{% extends 'base_page.html'%}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/css/docks/dock.css' %}">
+{% endblock %}
+
+
+{% block title %}
+Корпоративная культура
+{% endblock %}
+
+
+{% block content %}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+
+            <a href=""><span
+                    class="letter">Корпоративная культура</span></a>
+            <!-- Uncomment below if you prefer to use an image logo -->
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="{% url 'home'%}">Назад</a></li>
+            </ul>
+
+            <i class="bi bi-list mobile-nav-toggle">
+
+            </i>
+        </nav><!-- .navbar -->
+
+
+    </div>
+</header><!-- End Header -->
+<main id="main">
+
+    <!-- ======= About Section ======= -->
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="content">
+                        <h3>Карьера</h3>
+                        <p>Своим сотрудникам «Росатом» предлагает инструменты построения успешной карьеры, систему
+                            обучения и развития</p>
+                        <a href="https://www.rosatom.ru/career/" class="about-btn" target="_blank">Открыть</a>
+                    </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100" id="one">
+                                <a href="https://www.rosatom.ru/career/sotrudnikam/atomskills/" style=""
+                                   target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>AtomSkills</u></h3>
+                                </a>
+                                <i class="bi bi-trophy"></i>
+                                <p>Отраслевой чемпионат профессионального мастерства Госкорпорации «Росатом», проводимый
+                                    по методике WorldSkills</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="150" id="two">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-fullscreen"></i>
+                                <p>Является самым масштабным среди корпоративных чемпионатов профессионального
+                                    мастерства, организуемых промышленными компаниями в России</p>
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200" id="three">
+                                <a href="https://www.rosatom.ru/career/sotrudnikam/programmy-priznaniya/"
+                                   style="" target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Человек
+                                    года Росатома</u></h3></a>
+                                <i class="bi bi-award"></i>
+                                <p>Нацелена на признание заслуг лучших работников отрасли на самом высоком уровне
+                                    руководства Госкорпорации</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="250" id="four">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-ui-checks"></i>
+                                <p>Основными критериями отбора являются: значимые результаты работы, нестандартные
+                                    подходы к решению задач, разделение корпоративных ценностей и профессиональные
+                                    качества кандидатов</p>
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200" id="five">
+                                <a href="https://www.rosatom.ru/career/sotrudnikam/sistema-obucheniya-i-razvitiya-rabotnikov-atomnoy-otrasli/"
+                                   style="" target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Система
+                                    развития</u></h3></a>
+                                <i class="bi bi-arrow-left-right"></i>
+                                <p>Выстроена по трем основным векторам: управленческому, экспертному и проектному</p>
+                            </div>
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="250" id="six">
+                                <p></p>
+                                <br>
+                                <i class="bi bi-sort-up"></i>
+                                <p>План развития включает в себя приоритетные цели развития и мероприятия, необходимые
+                                    для достижения этих целей</p>
+                            </div>
+                        </div>
+                    </div><!-- End .content-->
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="content">
+                        <h3>Мероприятия и новости</h3>
+                        <p>Мы часто проводим интересные мероприятия для своих сотрудников! Чтобы быть в курсе
+                            всех новостей подписывайся на наши социальные сети</p>
+
+                    </div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-stretch">
+                    <div class="icon-boxes d-flex flex-column justify-content-center">
+                        <div class="row">
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <a href="https://www.facebook.com/rosatom.ru/"
+                                   target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Facebook</u></h3>
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <a href="https://twitter.com/rosatom/"
+                                   target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Twitter</u></h3>
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <a href="https://www.instagram.com/rosatom_ru/"
+                                   target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Instagram</u></h3>
+
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <a href="https://vk.com/rosatomru"
+                                   target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Вконтакте</u></h3>
+
+                            </div>
+
+                            <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                                <a href="https://ok.ru/rosatom"
+                                   target="_blank"><h3 data-aos="fade-up" data-aos-delay="200"><u>Одноклассники</u></h3>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </section><!-- End About Section -->
+</main><!-- End #main -->
+
+
+<!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+
+    </div>
+</footer><!-- End Footer -->
+
+<a href="{% url 'home'%}" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-left-short"></i></a>
+
+
+{% endblock %}
+<!--{% load static %}-->
+<!--<script src="{% static '/js/corp_viewer.js' %}"></script>-->
