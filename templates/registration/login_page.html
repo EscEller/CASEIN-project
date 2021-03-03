@@ -1,0 +1,84 @@
+
+{% extends "base_page.html" %}
+
+{% block static %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/login_page.css' %}">
+
+{% endblock %}
+
+{{% block login %}
+
+{% if next %}
+{% if user.is_authenticated %}
+
+<p>Your account doesn't have access to this page. To proceed,
+    please login with an account that has access.</p>
+
+{% else %}
+
+{% endif %}
+
+{% endif %}
+
+
+<div id="login">
+
+    <h1><strong>Вход в систему</strong></h1>
+
+    <form method="post" action="{% url 'login' %}">
+
+        {% csrf_token %}
+        <fieldset>
+            <table style="font-size: larger;">
+
+
+                <tr>
+                    <td style="font-size:14pt">Эл.почта</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>{{ form.username }}</td>
+                </tr>
+
+                <tr>
+                    <td style="font-size:14pt">Пароль</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>{{ form.password }}</td>
+                </tr>
+
+            </table>
+
+
+
+            <div class="col-auto my-1" style="padding-top: 2rem;
+                                          ">
+                <input type="submit" class="btn btn-primary" value="Войти" style="width: 10rem;"/>
+            </div>
+
+            <input type="hidden" name="next" value="{{ next }}"/>
+        </fieldset>
+    </form>
+
+
+</div>
+
+{% if form.errors %}
+<h5 style="margin-top:1px;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+">Ошибка в эл.почте или пароле.</h5>
+
+{% endif %}
+
+
+{% endblock %}
